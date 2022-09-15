@@ -44,7 +44,7 @@ export const create_quill = ({
   ${font}
   ${customJS}
   var quill = new Quill('#${id}', {
-    modules: { ${modules}, magicUrl: true, autoLinks: true, 'auto-links': true },
+    modules: { ${modules}, magicUrl: true },
     placeholder: '${placeholder}',
     theme: '${theme}'
   });
