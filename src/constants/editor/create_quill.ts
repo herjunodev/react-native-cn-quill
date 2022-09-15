@@ -16,6 +16,7 @@ export const create_quill = ({
   theme: 'snow' | 'bubble';
   customFonts: Array<string>;
   customJS: string;
+  module: any;
 }) => {
   let font = '';
   if (customFonts.length > 0) {
@@ -44,7 +45,7 @@ export const create_quill = ({
   ${font}
   ${customJS}
   var quill = new Quill('#${id}', {
-    modules: { ${modules} },
+    modules: { ${modules}, magicUrl: true, autoLinks: true, 'auto-links': true },
     placeholder: '${placeholder}',
     theme: '${theme}'
   });
